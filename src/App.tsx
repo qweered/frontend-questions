@@ -4,7 +4,6 @@ import {
 	Navbar,
 	Header,
 	Footer,
-	Aside,
 	MediaQuery,
 	Burger,
 	useMantineTheme,
@@ -12,10 +11,34 @@ import {
 } from '@mantine/core'
 import React from 'react'
 import { ThemeToggle } from './components/ThemeToggle'
+import QuestionList from './components/QuestionList'
 
 export default function App() {
 	const theme = useMantineTheme()
 	const [opened, setOpened] = useState(false)
+
+	const dummy_questions = [
+		{
+			id: 1,
+			title: 'What is react?',
+			answer: 'Suck dick',
+		},
+		{
+			id: 2,
+			title: 'What is react?',
+			answer: 'Suck dick',
+		},
+		{
+			id: 3,
+			title: 'What is react?',
+			answer: 'Suck dick',
+		},
+		{
+			id: 4,
+			title: 'What is react?',
+			answer: 'Suck dick',
+		},
+	]
 
 	return (
 		<AppShell
@@ -61,7 +84,7 @@ export default function App() {
 				</Header>
 			}
 		>
-			<Text>Resize app to see responsive navbar in action</Text>
+			<QuestionList questions={dummy_questions} />
 		</AppShell>
 	)
 }

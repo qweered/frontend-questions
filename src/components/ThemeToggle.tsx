@@ -6,7 +6,7 @@ import {
 } from '@mantine/core'
 import { IconSun, IconMoonStars } from '@tabler/icons'
 
-export function ThemeToggle() {
+export const ThemeToggle = () => {
 	const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 	const theme = useMantineTheme()
 
